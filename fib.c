@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int fibonacciIterative(unsigned long long int n) {
+unsigned long long int fibonacciIterative(unsigned long long int n) {
    // the sums of the terms preceding are the current
    if (n == 1) {
       printf("0");
@@ -26,7 +26,7 @@ int fibonacciIterative(unsigned long long int n) {
 
 
 
-int fibonacciRecursive(unsigned long long int n) {
+unsigned long long int fibonacciRecursive(unsigned long long int n) {
    // indexing was off at first since Fibonacci number 1 is 0
    if (n <= 1) {
       return 0;
@@ -49,11 +49,11 @@ int main(int argc, char *argv[]) {
    if (method == 'i') {
       // here do the iterative method
       //printf("This is the Iterative method up to: %d\n", fibonacciNum);
-      printf("%d", (fibonacciIterative(firstFibNumber)));
+      printf("%lld", (fibonacciIterative(firstFibNumber)));
    } else {
       // here do the recursive method
       //printf("This is the Recursive method up to: %d\n", fibonacciNum);
-      printf("%d", (fibonacciRecursive(firstFibNumber)));
+      printf("%lld", (fibonacciRecursive(firstFibNumber)));
    }
    return 0;
 }
